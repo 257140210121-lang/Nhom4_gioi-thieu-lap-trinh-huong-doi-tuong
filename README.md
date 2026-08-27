@@ -1,11 +1,18 @@
 # Nhom 4 gioi-thieu-lap-trinh-huong-doi-tuong
-- Trừu tượng hóa đối tượng theo dữ liệu: 
-là quá trình cô đọng, ẩn đi các chi tiết phức tạp bên dưới và chỉ giữ lại những đặc điểm, thuộc tính cốt lõi, quan trọng nhất của đối tượng để phục vụ cho việc mô hình hóa hoặc giải quyết bài toán
-- Các cấp độ trừu tượng hóa dữ liệu:
-Tầng quan niệm (Conceptual): Mô tả các thực thể dữ liệu cấp cao và mối quan hệ nghiệp vụ giữa chúng (ví dụ: mô hình ERD).
-Tầng logic (Logical): Định nghĩa cấu trúc bảng, trường dữ liệu và ràng buộc mà không phụ thuộc vào công nghệ lưu trữ cụ thể.
-Tầng vật lý (Physical): Cách thức lưu trữ thực tế trên đĩa cứng, ẩn hoàn toàn với tầng ứng dụng.
-- Lợi ích cốt lõi trong thiết kế hệ thống
-Giảm độ phức tạp: Giúp lập trình viên và nhà phân tích tập trung vào logic nghiệp vụ thay vì chi tiết kỹ thuật rườm rà.
-Tăng tính tái sử dụng: Các đối tượng được trừu tượng hóa chuẩn mực có thể dùng chung cho nhiều module khác nhau.
-Bảo trì và mở rộng dễ dàng: Khi cấu trúc dữ liệu thay đổi phía dưới, các lớp giao diện bên trên ít bị ảnh hưởng.
+sự kế thừa:
+Kế thừa là cơ chế cho phép một lớp mới (gọi là lớp dẫn xuất / lớp con) tái sử dụng và mở rộng các đặc tính (thuộc tính) và hành vi (phương thức) từ một lớp đã có (gọi là lớp cơ sở / lớp cha).
+Cho phép việc chỉ cần cài đặt phương thức ở một lớp cơ sở, mà có thể sử dụng được ở tất cả các lớp dẫn xuất.
+Cho phép tránh sự cài đặt trùng lặp mã nguồn của chương trình.
+Cho phép chỉ phải thay đổi một lần khi cần 2 phải thay đổi dữ liệu của các lớp.
+lợi ích:
+Tái sử dụng mã nguồn: Lớp con tự động có các tính năng của lớp cha mà không cần viết lại.
+Tránh trùng lặp code: Gom các đặc điểm chung vào một nơi duy nhất.
+Dễ dàng bảo trì: Khi cần sửa đổi logic chung, chỉ cần sửa ở lớp cha. Các lớp con sẽ tự động cập nhật theo.
+Dễ dàng mở rộng: Thêm lớp con mới cực kỳ nhanh chóng dựa trên nền tảng lớp cha sẵn có.
+Sự đóng gói:
+Che giấu sự cài đặt chi tiết bên trong: Người sử dụng đối tượng chỉ cần biết phương thức đó làm gì, không cần biết nó được viết như thế nào.
+Che giấu dữ liệu bên trong đối tượng: Ngăn chặn việc truy cập hoặc sửa đổi trực tiếp các thuộc tính (dữ liệu) của đối tượng từ bên ngoài.
+Hạn chế tối đa việc sửa lại mã chương trình: Khi bạn cần thay đổi logic bên trong một lớp, bạn chỉ cần sửa mã nguồn của lớp đó. Tất cả các nơi khác đang gọi đối tượng này hoàn toàn không bị ảnh hưởng và không cần viết lại.
+lợi ích:
+Bảo mật và kiểm soát dữ liệu:Ngăn dữ liệu bị thay đổi tùy tiện từ bên ngoài.
+Tăng tính tái sử dụng:Các lớp được đóng gói độc lập, dễ dàng mang sang dự án khác để sử dụng lại.
