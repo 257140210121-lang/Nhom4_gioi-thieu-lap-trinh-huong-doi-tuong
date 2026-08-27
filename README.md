@@ -1,5 +1,3 @@
-# Nhom 4 gioi-thieu-lap-trinh-huong-doi-tuong
-# Nhom 4 gioi-thieu-lap-trinh-huong-doi-tuong
 sự kế thừa:
 Kế thừa là cơ chế cho phép một lớp mới (gọi là lớp dẫn xuất / lớp con) tái sử dụng và mở rộng các đặc tính (thuộc tính) và hành vi (phương thức) từ một lớp đã có (gọi là lớp cơ sở / lớp cha).
 Cho phép việc chỉ cần cài đặt phương thức ở một lớp cơ sở, mà có thể sử dụng được ở tất cả các lớp dẫn xuất.
